@@ -1,0 +1,13 @@
+{
+  "name": "automarket",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n server,client -c blue,green \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "setup": "npm install && npm --prefix server install && npm --prefix server run prisma:setup && npm --prefix client install",
+    "build": "npm --prefix server run build && npm --prefix client run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
