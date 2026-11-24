@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AutoMarket & SmartStay Architecture Presentation</title>
+  <title>AutoMarket — Full-Stack Marketplace Presentation</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
   <script>
@@ -24,9 +24,9 @@
   <!-- Top bar -->
   <header class="no-print bg-slate-900/80 backdrop-blur border-b border-slate-800 px-6 py-3 flex justify-between items-center text-sm">
     <div class="flex items-center gap-3">
-      <span class="text-xl">🚗</span>
-      <span class="font-bold tracking-wide text-white">AutoMarket & SmartStay</span>
-      <span class="bg-indigo-500/20 text-indigo-400 text-xs px-2 py-0.5 rounded font-mono">Full-Stack Architecture</span>
+      <span class="text-2xl">🚗</span>
+      <span class="font-bold tracking-wide text-white text-base">AutoMarket</span>
+      <span class="bg-indigo-500/20 text-indigo-400 text-xs px-2.5 py-0.5 rounded-full font-mono font-medium">Full-Stack Vehicle Marketplace</span>
     </div>
     <div class="flex items-center gap-4">
       <span id="slideCounter" class="text-slate-400 font-mono text-xs">Slide 1 / 13</span>
@@ -42,18 +42,19 @@
       <!-- SLIDE 1: Title -->
       <div class="slide active flex-col justify-center items-center h-full p-12 text-center bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950">
         <span class="inline-block py-1.5 px-4 bg-indigo-500/20 border border-indigo-500/30 text-indigo-300 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
-          Full-Stack Marketplace Architecture
+          Full-Stack Automotive Engineering
         </span>
         <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
-          AutoMarket & SmartStay
+          AutoMarket
         </h1>
         <p class="text-xl sm:text-2xl text-slate-300 mt-4 max-w-3xl font-light">
-          A Decoupled 3-Tier Marketplace & Booking Architecture
+          A Decoupled 3-Tier Marketplace to Buy and Sell Cars & Bikes
         </p>
-        <div class="flex gap-4 mt-8 text-xs font-mono text-slate-400">
-          <span class="bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700">Next.js 14 (App Router)</span>
-          <span class="bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700">Node.js + Express API</span>
-          <span class="bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700">Prisma ORM (SQLite / Postgres)</span>
+        <div class="flex flex-wrap justify-center gap-4 mt-8 text-xs font-mono text-slate-400">
+          <span class="bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700">Next.js 14 App Router</span>
+          <span class="bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700">Express REST API (/api/v1)</span>
+          <span class="bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700">Prisma ORM (SQLite / PostgreSQL)</span>
+          <span class="bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700">Tailwind CSS</span>
         </div>
       </div>
 
@@ -70,8 +71,8 @@
               <h3 class="text-xl font-bold text-white mt-3">Frontend Layer</h3>
               <p class="text-xs text-indigo-400 font-mono mt-1">client/ • Port 3000</p>
               <ul class="text-sm text-slate-300 space-y-2 mt-4">
-                <li>• Next.js 14 with App Router</li>
-                <li>• TypeScript for compile-time safety</li>
+                <li>• Next.js 14 (App Router & SSR/CSR)</li>
+                <li>• TypeScript for strict typing</li>
                 <li>• Tailwind CSS responsive design</li>
                 <li>• Centralized Axios with auto-refresh</li>
                 <li>• Contexts: Auth, Theme, Compare, Toast</li>
@@ -87,9 +88,9 @@
               <p class="text-xs text-amber-400 font-mono mt-1">server/ • Port 4000 (/api/v1)</p>
               <ul class="text-sm text-slate-300 space-y-2 mt-4">
                 <li>• Node.js & Express REST architecture</li>
-                <li>• Zod request schema validation</li>
+                <li>• Zod request validation schemas</li>
                 <li>• Centralized global error handling</li>
-                <li>• JWT Access + Refresh rotation</li>
+                <li>• JWT Access + Refresh token rotation</li>
                 <li>• Helmet, CORS & Rate Limiting</li>
               </ul>
             </div>
@@ -103,10 +104,10 @@
               <p class="text-xs text-emerald-400 font-mono mt-1">server/prisma/</p>
               <ul class="text-sm text-slate-300 space-y-2 mt-4">
                 <li>• Prisma ORM Type-Safe Client</li>
-                <li>• SQLite for zero-setup local dev</li>
+                <li>• SQLite for instant zero-setup dev</li>
                 <li>• 1-line portability to PostgreSQL</li>
                 <li>• Indexes on brand, price, year, status</li>
-                <li>• Pre-seeded with 24 verified listings</li>
+                <li>• Pre-seeded with 24 verified cars & bikes</li>
               </ul>
             </div>
             <span class="text-[10px] text-slate-500 font-mono uppercase mt-4">Persistence Tier</span>
@@ -118,15 +119,15 @@
       <div class="slide flex-col h-full p-8 sm:p-12">
         <div class="mb-6">
           <span class="text-xs font-bold uppercase tracking-wider text-indigo-400 font-mono">03 / DEVELOPMENT GOVERNANCE</span>
-          <h2 class="text-3xl font-bold text-white mt-1">Methodology & Layered Design</h2>
+          <h2 class="text-3xl font-bold text-white mt-1">Software Engineering Methodology</h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 flex-1">
           <div class="bg-slate-800/50 border border-slate-700 p-6 rounded-2xl">
             <h3 class="text-lg font-bold text-white flex items-center gap-2">
-              <span class="text-indigo-400">01.</span> Strict 3-Tier Decoupling
+              <span class="text-indigo-400">01.</span> Strict 3-Tier Layered Architecture
             </h3>
             <p class="text-sm text-slate-300 mt-2 leading-relaxed">
-              The frontend never touches the database. All interactions flow strictly across a REST boundary: Client → Axios Interceptors → Express Routes → Zod Middleware → Services → Prisma ORM → SQLite/PostgreSQL.
+              The frontend never touches the database directly. Flow: Frontend → Axios Interceptor → REST API (/api/v1) → Controllers → Services → Prisma ORM → SQLite / PostgreSQL.
             </p>
           </div>
 
@@ -135,13 +136,13 @@
               <span class="text-indigo-400">02.</span> Automated Integration & E2E Testing
             </h3>
             <p class="text-sm text-slate-300 mt-2 leading-relaxed">
-              Every critical lifecycle state transition is verified with automated test suites: Registration → Login → Ad Creation (Pending) → Admin Moderation (Approved) → Filter Search → Favorites → Polling Chat.
+              Every critical lifecycle state transition is verified by automated integration scripts: Registration → Login → Ad Creation (Pending) → Admin Moderation (Approved) → Filter Search → Favorites → Polling Chat.
             </p>
           </div>
 
           <div class="bg-slate-800/50 border border-slate-700 p-6 rounded-2xl">
             <h3 class="text-lg font-bold text-white flex items-center gap-2">
-              <span class="text-indigo-400">03.</span> Defensive Architecture & Security
+              <span class="text-indigo-400">03.</span> Defensive Security & Integrity
             </h3>
             <p class="text-sm text-slate-300 mt-2 leading-relaxed">
               Password salting with bcrypt (10 rounds), dual-token JWT rotation (15m access, 7d refresh), HTTP security headers with Helmet, and CORS restricted to client origin.
@@ -163,35 +164,35 @@
       <div class="slide flex-col h-full p-8 sm:p-12">
         <div class="mb-4">
           <span class="text-xs font-bold uppercase tracking-wider text-indigo-400 font-mono">04 / ARCHITECTURAL OVERVIEW</span>
-          <h2 class="text-3xl font-bold text-white mt-1">System Architecture Overview</h2>
+          <h2 class="text-3xl font-bold text-white mt-1">System Architecture (Overview)</h2>
         </div>
         <div class="flex-1 bg-slate-800/60 border border-slate-700 rounded-2xl p-6 flex flex-col justify-around">
           <div class="flex items-center gap-4 p-3 bg-slate-900/60 rounded-xl border border-slate-800">
             <span class="w-10 h-10 rounded-lg bg-indigo-600/30 text-indigo-400 font-bold flex items-center justify-center shrink-0">1</span>
             <div>
-              <h4 class="font-bold text-white text-sm">Presentation Tier (Next.js 14)</h4>
-              <p class="text-xs text-slate-400">Responsive App Router, Client Components, ThemeContext, CompareContext, Axios token interceptors.</p>
+              <h4 class="font-bold text-white text-sm">Presentation Tier (Next.js 14 on Port 3000)</h4>
+              <p class="text-xs text-slate-400">App Router with dynamic pages: Home, Filtered Listings, Vehicle Detail, Compare, Sell, My Listings, Chat, Admin.</p>
             </div>
           </div>
           <div class="flex items-center gap-4 p-3 bg-slate-900/60 rounded-xl border border-slate-800">
             <span class="w-10 h-10 rounded-lg bg-amber-600/30 text-amber-400 font-bold flex items-center justify-center shrink-0">2</span>
             <div>
-              <h4 class="font-bold text-white text-sm">REST API Gateway (/api/v1)</h4>
-              <p class="text-xs text-slate-400">Express routing, Helmet security, CORS policy, rate limiting, and Multer multipart local image uploads.</p>
+              <h4 class="font-bold text-white text-sm">REST API Gateway (/api/v1 on Port 4000)</h4>
+              <p class="text-xs text-slate-400">Express routing, Helmet headers, CORS policies, rate limiters, and Multer multipart vehicle photo uploads.</p>
             </div>
           </div>
           <div class="flex items-center gap-4 p-3 bg-slate-900/60 rounded-xl border border-slate-800">
             <span class="w-10 h-10 rounded-lg bg-teal-600/30 text-teal-400 font-bold flex items-center justify-center shrink-0">3</span>
             <div>
-              <h4 class="font-bold text-white text-sm">Controllers & Middleware</h4>
-              <p class="text-xs text-slate-400">Zod payload schema validation, JWT auth guard, requireAdmin role verification, and centralized error handling.</p>
+              <h4 class="font-bold text-white text-sm">Controllers & Validation Middleware</h4>
+              <p class="text-xs text-slate-400">Zod request validation schemas, JWT Bearer authentication guards, requireAdmin middleware, and centralized error handler.</p>
             </div>
           </div>
           <div class="flex items-center gap-4 p-3 bg-slate-900/60 rounded-xl border border-slate-800">
             <span class="w-10 h-10 rounded-lg bg-emerald-600/30 text-emerald-400 font-bold flex items-center justify-center shrink-0">4</span>
             <div>
               <h4 class="font-bold text-white text-sm">Service & Persistence Tier (Prisma + SQLite/Postgres)</h4>
-              <p class="text-xs text-slate-400">Type-safe queries, relation mapping, multi-field search indexes, and cascade deletion integrity.</p>
+              <p class="text-xs text-slate-400">Type-safe queries, relation mapping, multi-column search indexes, and cascade deletion integrity.</p>
             </div>
           </div>
         </div>
@@ -200,49 +201,49 @@
       <!-- SLIDE 5: Features -->
       <div class="slide flex-col h-full p-8 sm:p-12">
         <div class="mb-4">
-          <span class="text-xs font-bold uppercase tracking-wider text-indigo-400 font-mono">05 / FUNCTIONALITY</span>
-          <h2 class="text-3xl font-bold text-white mt-1">Core Platform Features</h2>
+          <span class="text-xs font-bold uppercase tracking-wider text-indigo-400 font-mono">05 / CORE FUNCTIONALITY</span>
+          <h2 class="text-3xl font-bold text-white mt-1">AutoMarket Core Features</h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 flex-1">
           <div class="p-4 bg-slate-800/50 rounded-xl border border-slate-700">
-            <h4 class="font-bold text-white text-sm">🔍 Discovery & Filters</h4>
-            <p class="text-xs text-slate-400 mt-1">Multi-attribute filter sidebar (Type, Brand, Price range, Year, Fuel, Transmission, Condition), sorting, and pagination.</p>
+            <h4 class="font-bold text-white text-sm">🔍 Vehicle Search & Filters</h4>
+            <p class="text-xs text-slate-400 mt-1">Multi-attribute filter sidebar (Car/Bike, Brand, Price slider, Year, Fuel, Transmission, Condition), sorting, and pagination.</p>
           </div>
           <div class="p-4 bg-slate-800/50 rounded-xl border border-slate-700">
-            <h4 class="font-bold text-white text-sm">⚖️ Comparison Matrix</h4>
-            <p class="text-xs text-slate-400 mt-1">Side-by-side spec comparison table for up to 3 selected vehicles or rooms with floating drawer indicator.</p>
+            <h4 class="font-bold text-white text-sm">⚖️ 3-Vehicle Comparison</h4>
+            <p class="text-xs text-slate-400 mt-1">Side-by-side technical specs comparison table for up to 3 cars/bikes highlighting price and specification differences.</p>
           </div>
           <div class="p-4 bg-slate-800/50 rounded-xl border border-slate-700">
             <h4 class="font-bold text-white text-sm">💰 EMI Loan Calculator</h4>
-            <p class="text-xs text-slate-400 mt-1">Live client-side monthly payment calculation adjusting loan amount, interest rate, and tenure.</p>
+            <p class="text-xs text-slate-400 mt-1">Interactive monthly installment calculator adjusting loan amount, interest rate, and tenure with total interest breakdown.</p>
           </div>
           <div class="p-4 bg-slate-800/50 rounded-xl border border-slate-700">
-            <h4 class="font-bold text-white text-sm">💬 Real-Time In-App Chat</h4>
-            <p class="text-xs text-slate-400 mt-1">Two-pane conversation inbox with automated 5-second polling synchronization and unread indicators.</p>
+            <h4 class="font-bold text-white text-sm">💬 In-App Buyer-Seller Chat</h4>
+            <p class="text-xs text-slate-400 mt-1">Two-pane inbox bound to specific vehicle listings with 5-second polling updates and unread message tracking.</p>
           </div>
           <div class="p-4 bg-slate-800/50 rounded-xl border border-slate-700">
             <h4 class="font-bold text-white text-sm">📸 Photo Gallery & Post Ad</h4>
-            <p class="text-xs text-slate-400 mt-1">Multi-image upload with live file preview and local disk storage via Multer.</p>
+            <p class="text-xs text-slate-400 mt-1">Multi-image vehicle photo upload with client preview, local disk storage via Multer, and 'Mark as Sold' toggle.</p>
           </div>
           <div class="p-4 bg-slate-800/50 rounded-xl border border-slate-700">
             <h4 class="font-bold text-white text-sm">🛡️ Admin Moderation Queue</h4>
-            <p class="text-xs text-slate-400 mt-1">Listing approval/rejection workflow, user ban controls, report resolution, and platform stats.</p>
+            <p class="text-xs text-slate-400 mt-1">Approval/rejection queue for pending vehicles, user ban controls, ad report reviews, and real-time platform statistics.</p>
           </div>
         </div>
       </div>
 
-      <!-- SLIDE 6: Booking Flow -->
+      <!-- SLIDE 6: Buying Flow -->
       <div class="slide flex-col h-full p-8 sm:p-12">
         <div class="mb-4">
           <span class="text-xs font-bold uppercase tracking-wider text-indigo-400 font-mono">06 / TRANSACTION LIFECYCLE</span>
-          <h2 class="text-3xl font-bold text-white mt-1">Booking & Purchase Flow Summary</h2>
+          <h2 class="text-3xl font-bold text-white mt-1">Vehicle Buying & Selling Flow (Summary)</h2>
         </div>
         <div class="grid grid-cols-4 gap-4 flex-1 items-center">
           <div class="bg-slate-800/70 border border-indigo-500/50 p-5 rounded-2xl h-64 flex flex-col justify-between">
             <span class="text-xs font-mono text-indigo-400 font-bold">PHASE 01</span>
             <div>
               <h4 class="font-bold text-white text-base">Browse & Filter</h4>
-              <p class="text-xs text-slate-400 mt-2">Buyer searches inventory, applies price filters, and evaluates vehicles or rooms.</p>
+              <p class="text-xs text-slate-400 mt-2">Buyer searches cars or bikes, applies price sliders, fuel filters, and evaluates verified listings.</p>
             </div>
             <span class="text-2xl">🔎</span>
           </div>
@@ -250,8 +251,8 @@
           <div class="bg-slate-800/70 border border-indigo-500/50 p-5 rounded-2xl h-64 flex flex-col justify-between">
             <span class="text-xs font-mono text-indigo-400 font-bold">PHASE 02</span>
             <div>
-              <h4 class="font-bold text-white text-base">Evaluate & Calculate</h4>
-              <p class="text-xs text-slate-400 mt-2">Inspect specs, review photo gallery, compare up to 3 listings, and run EMI calculator.</p>
+              <h4 class="font-bold text-white text-base">Inspect & Compare</h4>
+              <p class="text-xs text-slate-400 mt-2">Inspect specs, review photo gallery, compare up to 3 vehicles, and calculate monthly EMI payments.</p>
             </div>
             <span class="text-2xl">📊</span>
           </div>
@@ -259,8 +260,8 @@
           <div class="bg-slate-800/70 border border-amber-500/50 p-5 rounded-2xl h-64 flex flex-col justify-between">
             <span class="text-xs font-mono text-amber-400 font-bold">PHASE 03</span>
             <div>
-              <h4 class="font-bold text-white text-base">Contact & Inquire</h4>
-              <p class="text-xs text-slate-400 mt-2">Click 'Contact Seller', initiating an authenticated conversation thread with 5s polling.</p>
+              <h4 class="font-bold text-white text-base">Inquire & Test Drive</h4>
+              <p class="text-xs text-slate-400 mt-2">Click 'Contact Seller', initiating an authenticated chat thread to arrange inspection and test drive.</p>
             </div>
             <span class="text-2xl">💬</span>
           </div>
@@ -268,8 +269,8 @@
           <div class="bg-slate-800/70 border border-emerald-500/50 p-5 rounded-2xl h-64 flex flex-col justify-between">
             <span class="text-xs font-mono text-emerald-400 font-bold">PHASE 04</span>
             <div>
-              <h4 class="font-bold text-white text-base">Close & Mark Sold</h4>
-              <p class="text-xs text-slate-400 mt-2">Parties negotiate terms. Seller updates ad status to SOLD; listing archived.</p>
+              <h4 class="font-bold text-white text-base">Deal & Mark Sold</h4>
+              <p class="text-xs text-slate-400 mt-2">Parties agree on final price. Seller marks vehicle as SOLD; ad is archived from active search.</p>
             </div>
             <span class="text-2xl">🤝</span>
           </div>
@@ -280,42 +281,54 @@
       <div class="slide flex-col h-full p-8 sm:p-12 overflow-y-auto">
         <div class="mb-4">
           <span class="text-xs font-bold uppercase tracking-wider text-indigo-400 font-mono">07 / DATABASE SCHEMA</span>
-          <h2 class="text-3xl font-bold text-white mt-1">SmartStay & AutoMarket — ER Diagram</h2>
+          <h2 class="text-3xl font-bold text-white mt-1">AutoMarket — Entity-Relationship (ER) Diagram</h2>
         </div>
         <div class="flex-1 bg-white rounded-2xl p-4 flex items-center justify-center text-slate-900 overflow-auto">
           <div class="mermaid text-xs">
 erDiagram
-    USER ||--o{ LISTING : owns
+    USER ||--o{ LISTING : "posts (as Seller)"
     USER ||--o{ FAVORITE : saves
     USER ||--o{ MESSAGE : sends
     USER ||--o{ REPORT : submits
     LISTING ||--o{ LISTING_IMAGE : contains
-    LISTING ||--o{ FAVORITE : "favorited in"
-    LISTING ||--o{ CONVERSATION : targets
+    LISTING ||--o{ FAVORITE : "saved as"
+    LISTING ||--o{ CONVERSATION : "subject of"
     LISTING ||--o{ REPORT : receives
-    CONVERSATION ||--o{ MESSAGE : includes
+    CONVERSATION ||--o{ MESSAGE : contains
 
     USER {
         string id PK
         string email UK
         string password
         string name
-        string role
+        string phone
+        string role "USER | ADMIN"
         boolean banned
     }
     LISTING {
         string id PK
         string title
-        string type
-        float price
+        string type "CAR | BIKE"
+        string brand
+        string model
         int year
-        string status
+        float price
+        int mileage
+        string fuelType
+        string transmission
+        string condition
+        string status "PENDING | APPROVED | REJECTED | SOLD"
         int views
         string sellerId FK
     }
     LISTING_IMAGE {
         string id PK
         string url
+        string listingId FK
+    }
+    FAVORITE {
+        string id PK
+        string userId FK
         string listingId FK
     }
     CONVERSATION {
@@ -330,6 +343,14 @@ erDiagram
         string conversationId FK
         boolean read
     }
+    REPORT {
+        string id PK
+        string reason
+        string description
+        string status "PENDING | REVIEWED"
+        string listingId FK
+        string userId FK
+    }
           </div>
         </div>
       </div>
@@ -338,24 +359,30 @@ erDiagram
       <div class="slide flex-col h-full p-8 sm:p-12 overflow-y-auto">
         <div class="mb-4">
           <span class="text-xs font-bold uppercase tracking-wider text-indigo-400 font-mono">08 / PROCESS FLOW</span>
-          <h2 class="text-3xl font-bold text-white mt-1">SmartStay — Booking Flow (Activity Diagram)</h2>
+          <h2 class="text-3xl font-bold text-white mt-1">AutoMarket — Buying & Selling Flow (Activity Diagram)</h2>
         </div>
         <div class="flex-1 bg-white rounded-2xl p-4 flex items-center justify-center text-slate-900 overflow-auto">
           <div class="mermaid text-xs">
 flowchart TD
-    Start([User Visits Platform]) --> Browse[Search & Filter Listings]
-    Browse --> Select[Select Listing / Room]
-    Select --> Calc[Use EMI Calculator / Compare Specs]
-    Calc --> AuthCheck{User Authenticated?}
+    Start([Buyer Visits AutoMarket]) --> Search[Search by Brand, Model, City]
+    Search --> Filter[Apply Filters: Price, Year, Fuel, Transmission]
+    Filter --> Card[Select Car or Bike Listing]
+    Card --> Details[Inspect Photos, Specs & EMI Calculator]
+    Details --> CompareCheck{Compare with others?}
+    CompareCheck -- Yes --> Compare[Add to Compare: Side-by-Side Specs]
+    CompareCheck -- No --> ContactCheck
+    Compare --> ContactCheck{Contact Seller?}
+    ContactCheck -- No --> Fav[Save to Favorites]
+    ContactCheck -- Yes --> AuthCheck{Logged In?}
     AuthCheck -- No --> Login[Sign In / Register]
-    Login --> Select
-    AuthCheck -- Yes --> Action{Desired Action}
-    Action -- Save --> Fav[Add to Favorites]
-    Action -- Inquire --> Chat[Start Chat / Inquire Booking]
-    Chat --> SellerRespond[Seller Receives & Responds]
-    SellerRespond --> Negotiate[Finalize Deal Terms]
-    Negotiate --> MarkSold[Seller Marks as Sold / Booked]
-    MarkSold --> End([Transaction Complete])
+    Login --> Chat
+    AuthCheck -- Yes --> Chat[Open Listing Chat Thread]
+    Chat --> TestDrive[Inquire Details & Schedule Test Drive]
+    TestDrive --> Negotiate[Negotiate Price with Seller]
+    Negotiate --> Deal{Deal Agreed?}
+    Deal -- Yes --> MarkSold[Seller Marks Vehicle as SOLD]
+    Deal -- No --> Search
+    MarkSold --> End([Vehicle Sold / Transferred])
           </div>
         </div>
       </div>
@@ -364,35 +391,39 @@ flowchart TD
       <div class="slide flex-col h-full p-8 sm:p-12 overflow-y-auto">
         <div class="mb-4">
           <span class="text-xs font-bold uppercase tracking-wider text-indigo-400 font-mono">09 / ARCHITECTURE BLUEPRINT</span>
-          <h2 class="text-3xl font-bold text-white mt-1">SmartStay — System Architecture Diagram</h2>
+          <h2 class="text-3xl font-bold text-white mt-1">AutoMarket — System Architecture Diagram</h2>
         </div>
         <div class="flex-1 bg-white rounded-2xl p-4 flex items-center justify-center text-slate-900 overflow-auto">
           <div class="mermaid text-xs">
 flowchart LR
-    subgraph ClientLayer["Frontend Client (Port 3000)"]
-        UI[Next.js App Router]
-        Axios[Axios + Auth Interceptor]
-        Context[Auth & Compare Context]
-        UI <--> Context
+    subgraph ClientTier["Frontend Client Tier (Next.js 14 • Port 3000)"]
+        UI["Pages (Home, Listings, Detail, Compare, Sell, Chat, Admin)"]
+        Contexts["State Contexts (Auth, Theme, Compare, Toast)"]
+        Axios["Axios REST Client + JWT Auto-Refresh Interceptor"]
+        UI <--> Contexts
         UI --> Axios
     end
 
-    subgraph APILayer["Backend Server (Port 4000)"]
-        Router["Express Router (/api/v1)"]
-        MW["Middleware (Helmet, CORS, RateLimit, Auth, Multer)"]
-        Controller["Controllers (Zod Validation)"]
-        Service["Services (Business Logic)"]
-        Axios --> Router
-        Router --> MW --> Controller --> Service
+    subgraph APITier["Backend API Gateway Tier (Express.js • Port 4000)"]
+        Gateway["REST Gateway (/api/v1)"]
+        Security["Security: Helmet, CORS, Rate Limiter"]
+        AuthMid["JWT Auth Middleware & Zod Validation"]
+        Multer["Multer Storage (/uploads)"]
+        Services["Business Services (Auth, Listings, Chat, Admin, Favorites)"]
+        
+        Axios --> Gateway
+        Gateway --> Security --> AuthMid --> Services
+        Gateway --> Multer
     end
 
-    subgraph DataLayer["Persistence Layer"]
-        Prisma["Prisma ORM Client"]
-        DB[("Database: SQLite / PostgreSQL")]
-        FS[("File System: /uploads")]
-        Service --> Prisma
-        Service --> FS
-        Prisma --> DB
+    subgraph DBTier["Persistence Tier (Prisma ORM)"]
+        PrismaClient["Prisma Client"]
+        Database[("SQLite (dev.db) / PostgreSQL")]
+        DiskStorage[("Local File System: server/uploads/")]
+        
+        Services --> PrismaClient
+        Multer --> DiskStorage
+        PrismaClient --> Database
     end
           </div>
         </div>
@@ -402,41 +433,45 @@ flowchart LR
       <div class="slide flex-col h-full p-8 sm:p-12 overflow-y-auto">
         <div class="mb-4">
           <span class="text-xs font-bold uppercase tracking-wider text-indigo-400 font-mono">10 / ROLE INTERACTION</span>
-          <h2 class="text-3xl font-bold text-white mt-1">SmartStay — System Use Case Diagram</h2>
+          <h2 class="text-3xl font-bold text-white mt-1">AutoMarket — System Use Case Diagram</h2>
         </div>
         <div class="flex-1 bg-white rounded-2xl p-4 flex items-center justify-center text-slate-900 overflow-auto">
           <div class="mermaid text-xs">
 flowchart TD
-    Buyer((Buyer / Guest))
-    Seller((Seller / Host))
+    Buyer((Buyer))
+    Seller((Seller))
     Admin((Administrator))
 
-    subgraph Marketplace["AutoMarket / SmartStay System Boundary"]
-        UC1[Browse & Search Vehicles / Rooms]
-        UC2[Compare Listings Side-by-Side]
-        UC3[Manage Favorites]
-        UC4[Post & Edit Listings with Photos]
-        UC5[Mark Listing as Sold / Booked]
-        UC6[In-App Real-Time Messaging]
-        UC7[Submit Report on Listing]
-        UC8[Approve / Reject Pending Listings]
-        UC9[Ban / Unban Malicious Users]
-        UC10[View Analytics & System Stats]
+    subgraph AutoMarketBoundary["AutoMarket Marketplace System Boundary"]
+        UC1[Search & Filter Cars / Bikes]
+        UC2[Compare Vehicles Side-by-Side]
+        UC3[Calculate Monthly EMI Repayments]
+        UC4[Save Vehicles to Favorites]
+        UC5[Post Ad with Vehicle Specs & Photos]
+        UC6[Manage My Listings & View Counts]
+        UC7[Mark Listing as SOLD]
+        UC8[In-App Buyer-Seller Chat]
+        UC9[Submit Report on Inappropriate Ad]
+        UC10[Approve / Reject Pending Listings]
+        UC11[Ban / Unban Abusive Users]
+        UC12[View Marketplace Statistics & Metrics]
     end
 
     Buyer --> UC1
     Buyer --> UC2
     Buyer --> UC3
-    Buyer --> UC6
-    Buyer --> UC7
+    Buyer --> UC4
+    Buyer --> UC8
+    Buyer --> UC9
 
-    Seller --> UC4
     Seller --> UC5
     Seller --> UC6
+    Seller --> UC7
+    Seller --> UC8
 
-    Admin --> UC8
-    Admin --> UC9
     Admin --> UC10
+    Admin --> UC11
+    Admin --> UC12
           </div>
         </div>
       </div>
@@ -445,28 +480,28 @@ flowchart TD
       <div class="slide flex-col h-full p-8 sm:p-12">
         <div class="mb-6">
           <span class="text-xs font-bold uppercase tracking-wider text-indigo-400 font-mono">11 / ROADMAP</span>
-          <h2 class="text-3xl font-bold text-white mt-1">Future Work & Scalability</h2>
+          <h2 class="text-3xl font-bold text-white mt-1">Future Work & Scalability Roadmap</h2>
         </div>
         <div class="grid grid-cols-2 gap-6 flex-1">
           <div class="p-6 bg-slate-800/50 border border-slate-700 rounded-2xl">
             <span class="text-2xl">💳</span>
-            <h4 class="text-lg font-bold text-white mt-2">Payment Gateway & Escrow</h4>
-            <p class="text-xs text-slate-400 mt-2">Stripe / Razorpay integration with deposit escrow holds until physical vehicle/room inspection is complete.</p>
+            <h4 class="text-lg font-bold text-white mt-2">Digital Token & Escrow Payments</h4>
+            <p class="text-xs text-slate-400 mt-2">Integration with Razorpay / Stripe for token booking deposits held in escrow until physical test drive and inspection.</p>
           </div>
           <div class="p-6 bg-slate-800/50 border border-slate-700 rounded-2xl">
             <span class="text-2xl">⚡</span>
             <h4 class="text-lg font-bold text-white mt-2">WebSockets & Push Notifications</h4>
-            <p class="text-xs text-slate-400 mt-2">Upgrading 5-second polling to bi-directional Socket.io with typing indicators and mobile push alerts.</p>
+            <p class="text-xs text-slate-400 mt-2">Upgrading 5-second polling chat to bi-directional Socket.io with typing indicators and mobile push alerts for price drops.</p>
           </div>
           <div class="p-6 bg-slate-800/50 border border-slate-700 rounded-2xl">
             <span class="text-2xl">☁️</span>
             <h4 class="text-lg font-bold text-white mt-2">Cloud Object Storage (AWS S3)</h4>
-            <p class="text-xs text-slate-400 mt-2">Offloading media from local /uploads to AWS S3 / Cloudinary with WebP compression and CDN caching.</p>
+            <p class="text-xs text-slate-400 mt-2">Offloading media from local /uploads to AWS S3 / Cloudinary with WebP compression and global CDN distribution.</p>
           </div>
           <div class="p-6 bg-slate-800/50 border border-slate-700 rounded-2xl">
             <span class="text-2xl">🤖</span>
-            <h4 class="text-lg font-bold text-white mt-2">AI Valuation & Recommendations</h4>
-            <p class="text-xs text-slate-400 mt-2">Machine-learning price estimator and personalized recommendation engine based on user browsing behavior.</p>
+            <h4 class="text-lg font-bold text-white mt-2">AI Price Valuation & Computer Vision</h4>
+            <p class="text-xs text-slate-400 mt-2">Machine learning fair-market value estimator based on vehicle year, mileage, and condition, plus automated photo defect detection.</p>
           </div>
         </div>
       </div>
@@ -496,7 +531,7 @@ flowchart TD
             <span class="text-emerald-400 text-xl font-bold">✔</span>
             <div>
               <h4 class="font-bold text-white">Zero-Setup Developer Experience</h4>
-              <p class="text-sm text-slate-300">Unified npm run setup and npm run dev with SQLite database pre-seeded with 24 vehicles.</p>
+              <p class="text-sm text-slate-300">Unified npm run setup and npm run dev with SQLite database pre-seeded with 24 verified cars and bikes.</p>
             </div>
           </div>
         </div>
@@ -551,7 +586,6 @@ flowchart TD
         s.classList.toggle('active', i === index);
       });
       counter.innerText = `Slide ${index + 1} / ${totalSlides}`;
-      // re-trigger mermaid if needed
       if (window.mermaid) {
         window.mermaid.contentLoaded();
       }
