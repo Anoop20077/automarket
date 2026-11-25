@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoMarket — Academic Project Report</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @media print {
+      body { background: white !important; color: black !important; font-size: 11pt; }
+      .page-break { page-break-after: always; }
+      .no-print { display: none !important; }
+      @page { margin: 1in; }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans leading-relaxed">
+
+  <!-- Print Button Bar -->
+  <div class="no-print fixed top-4 right-4 z-50 flex gap-2">
+    <button onclick="window.print()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-5 rounded-lg shadow-lg flex items-center gap-2">
+      🖨️ Print / Save as PDF
+    </button>
+  </div>
+
+  <div class="max-w-4xl mx-auto my-8 bg-white p-12 sm:p-16 shadow-xl rounded-2xl border border-gray-200">
+
+    <!-- 1. COVER PAGE -->
+    <div class="page-break flex flex-col justify-between min-h-[85vh] text-center border-b pb-12 mb-12">
+      <div>
+        <p class="text-sm font-bold tracking-widest text-gray-500 uppercase">Academic Project Report Submission</p>
+        <p class="text-xs text-gray-400 mt-1 italic">Total Marks: 10</p>
+      </div>
+
+      <div class="my-16">
+        <span class="text-4xl block mb-4">🚗</span>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-indigo-700 uppercase tracking-tight">AutoMarket</h1>
+        <p class="text-lg text-gray-600 mt-3 font-medium">A Full-Stack Marketplace to Buy and Sell Cars and Bikes</p>
+        <p class="text-xs text-gray-500 mt-2 font-mono">Decoupled 3-Tier Web Application: Next.js 14 • Express REST API • Prisma ORM</p>
+      </div>
+
+      <div class="text-left max-w-md mx-auto w-full bg-gray-50 p-6 rounded-xl border border-gray-200 text-sm space-y-2">
+        <p><strong class="text-gray-700">Candidate Name:</strong> Anoop</p>
+        <p><strong class="text-gray-700">Roll Number:</strong> [Your Roll Number Here]</p>
+        <p><strong class="text-gray-700">Subject:</strong> Web Development & Software Engineering</p>
+        <p><strong class="text-gray-700">Department:</strong> Department of Computer Science & Engineering</p>
+        <p><strong class="text-gray-700">Academic Year:</strong> 2024 – 2026</p>
+        <p><strong class="text-gray-700">GitHub:</strong> <a href="https://github.com/Anoop20077/automarket" class="text-indigo-600 underline">github.com/Anoop20077/automarket</a></p>
+      </div>
+
+      <p class="text-xs text-gray-400 mt-8">Submission Deadline: 25 November 2026</p>
+    </div>
+
+    <!-- 2. DECLARATION -->
+    <div class="page-break mb-12">
+      <h2 class="text-2xl font-bold text-indigo-700 border-b pb-2 mb-4">2. Certificate & Declaration</h2>
+      <p class="mb-4 text-justify">
+        I hereby declare that the project entitled <strong>"AutoMarket — A Full-Stack Marketplace to Buy and Sell Cars and Bikes"</strong> submitted in partial fulfillment of the requirements for the final assessment in Web Development & Software Engineering is a bona fide record of original work carried out by me.
+      </p>
+      <p class="mb-4 text-justify">
+        This project work is entirely my own creation, developed autonomously and verified through automated end-to-end testing suites. The code and technical implementation have not been submitted to any other university or institution for the award of any degree, diploma, or academic credit.
+      </p>
+      <p class="mb-8 text-justify">
+        All source code, schemas, application endpoints, and frontend user interfaces presented in this report have been committed and verified in the official source code repository at <a href="https://github.com/Anoop20077/automarket" class="text-indigo-600 underline">https://github.com/Anoop20077/automarket</a>.
+      </p>
+
+      <div class="mt-16 flex justify-between items-end text-sm text-gray-700">
+        <div>
+          <p><strong>Date:</strong> 25 November 2026</p>
+          <p><strong>Place:</strong> Bengaluru, India</p>
+        </div>
+        <div class="text-center border-t border-gray-400 pt-2 w-48">
+          <p><strong>Anoop</strong></p>
+          <p class="text-xs text-gray-500">Candidate Signature</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. ACKNOWLEDGEMENT -->
+    <div class="page-break mb-12">
+      <h2 class="text-2xl font-bold text-indigo-700 border-b pb-2 mb-4">3. Acknowledgement</h2>
+      <p class="mb-4 text-justify">
+        I express my sincere gratitude to our respected course faculty members and project coordinators for providing clear guidelines, technical inspiration, and academic infrastructure that made this project possible.
+      </p>
+      <p class="mb-4 text-justify">
+        I would like to extend special thanks to the Head of Department and the academic staff of Computer Science & Engineering for their continuous encouragement and for imparting a strong foundation in modern software engineering principles, full-stack frameworks, database modeling, and decoupled system design.
+      </p>
+      <p class="text-justify">
+        Finally, I extend my appreciation to the open-source software community behind Next.js, Node.js, Express, Prisma ORM, and Tailwind CSS, whose comprehensive documentation and modern developer tooling enabled the rapid, robust development of AutoMarket.
+      </p>
+    </div>
+
+    <!-- 4. ABSTRACT -->
+    <div class="page-break mb-12">
+      <h2 class="text-2xl font-bold text-indigo-700 border-b pb-2 mb-4">4. Abstract</h2>
+      <p class="mb-4 text-justify">
+        The automobile and pre-owned vehicle marketplace in India is traditionally characterized by fragmented dealer networks, opaque valuation metrics, and high commission intermediary platforms. <strong>AutoMarket</strong> was engineered to overcome these challenges by delivering an open, responsive, direct buyer-to-seller marketplace for certified pre-owned cars and two-wheelers.
+      </p>
+      <p class="mb-4 text-justify">
+        The application is structured upon a clean three-tier architecture: a modern Next.js 14 frontend utilizing the React App Router and Tailwind CSS; a stateless Express.js REST API gateway configured at <code class="bg-gray-100 px-1 py-0.5 rounded text-indigo-600 font-mono">/api/v1</code> with Zod validation, Helmet security, rate limiting, and JWT authentication; and a Prisma ORM persistence tier backed by SQLite for zero-setup development with instant portability to PostgreSQL.
+      </p>
+      <p class="text-justify">
+        Key platform capabilities include multi-attribute vehicle searching, side-by-side technical comparison of up to three vehicles, real-time monthly EMI financial loan calculation, authenticated image uploads via Multer, in-app real-time messaging with 5-second polling updates, and an administrator moderation portal featuring pending listing approvals, user ban controls, and dispute reports. Automated end-to-end integration tests confirmed 100% test pass status across the full lifecycle.
+      </p>
+    </div>
+
+    <!-- 5. INTRODUCTION -->
+    <div class="page-break mb-12">
+      <h2 class="text-2xl font-bold text-indigo-700 border-b pb-2 mb-4">5. Introduction</h2>
+      <p class="mb-4 text-justify">
+        With the accelerating digital transformation of commerce, peer-to-peer automotive marketplaces have become critical channels for vehicle trading. Buyers increasingly demand transparent vehicle history, technical specification transparency, fair market pricing, and direct communication channels with vehicle owners.
+      </p>
+      <p class="mb-4 text-justify">
+        AutoMarket addresses these needs through an engineered web application combining performance, responsive user experiences, and rigorous backend data integrity. Built completely with TypeScript across both client and server domains, AutoMarket ensures compile-time type safety from the presentation component layer down to database entity models.
+      </p>
+      <h3 class="text-lg font-bold text-gray-800 mt-4 mb-2">5.1 Scope of the System</h3>
+      <ul class="list-disc pl-6 space-y-1 text-sm text-gray-700">
+        <li><strong>Certified Vehicle Catalogue:</strong> Search and browse categorized inventories across multi-brand cars and motorbikes.</li>
+        <li><strong>Consumer Decision Utilities:</strong> Real-time EMI loan calculator and side-by-side specification comparison matrix.</li>
+        <li><strong>Seller Workspace:</strong> Ad creation suite with client-side image preview and local multipart storage.</li>
+        <li><strong>Direct Messaging:</strong> Private, listing-bound messaging between buyers and sellers with automated 5-second polling synchronization.</li>
+        <li><strong>Administrative Governance:</strong> Centralized portal providing live platform metrics, listing review queues, and user moderation.</li>
+      </ul>
+    </div>
+
+    <!-- 6. OBJECTIVES & 7. PROBLEM STATEMENT -->
+    <div class="page-break mb-12">
+      <h2 class="text-2xl font-bold text-indigo-700 border-b pb-2 mb-4">6. Objectives</h2>
+      <ol class="list-decimal pl-6 space-y-2 text-sm text-gray-700 mb-8">
+        <li><strong>Strict 3-Tier Layered Architecture:</strong> Ensure complete decoupling between client, REST API, and database layers so the frontend never directly accesses the database.</li>
+        <li><strong>Type-Safe Full-Stack Implementation:</strong> Employ TypeScript across Next.js, Express, and Prisma ORM to eliminate runtime type mismatches.</li>
+        <li><strong>Zero-Setup Developer Experience (DX):</strong> Orchestrate root automation enabling instant installation, schema synchronization, and 24-vehicle database seeding via a single <code class="font-mono bg-gray-100 px-1">npm run setup</code> command.</li>
+        <li><strong>Security by Design:</strong> Implement JWT access and refresh token rotation, bcrypt password salting (10 rounds), Helmet security headers, CORS origin locking, and Zod input validation.</li>
+        <li><strong>Buyer Empowerment Utilities:</strong> Integrate an accurate Indian Rupee (INR) loan EMI calculator and a 3-vehicle technical spec comparison matrix.</li>
+        <li><strong>Moderation & Trust:</strong> Build an administrative review pipeline where newly posted listings remain pending until verified and approved by administrators.</li>
+      </ol>
+
+      <h2 class="text-2xl font-bold text-indigo-700 border-b pb-2 mb-4">7. Problem Statement</h2>
+      <p class="mb-4 text-justify">
+        Purchasing or selling pre-owned cars and two-wheelers in conventional digital markets presents severe operational and user experience problems:
+      </p>
+      <ul class="list-disc pl-6 space-y-2 text-sm text-gray-700">
+        <li><strong>Fragmented User Experience:</strong> Traditional classified portals feature bloated user interfaces filled with unrelated advertisements, sluggish page loads, and poor mobile responsiveness.</li>
+        <li><strong>Lack of Direct Interaction:</strong> Buyers are often subjected to third-party broker calls and unwanted telemarketing rather than enjoying direct, authenticated in-app messaging with vehicle sellers.</li>
+        <li><strong>Financial Opacity:</strong> Buyers frequently discover hidden financing fees or lack immediate visibility into actual monthly loan installments and interest outlays during vehicle evaluation.</li>
+        <li><strong>Fraud & Unverified Listings:</strong> Without mandatory administrative review queues, classified platforms frequently suffer from spam, duplicate postings, and bait-and-switch listings.</li>
+      </ul>
+    </div>
+
+    <!-- 8. TOOLS AND TECHNOLOGIES -->
+    <div class="page-break mb-12">
+      <h2 class="text-2xl font-bold text-indigo-700 border-b pb-2 mb-4">8. Tools and Technologies Used</h2>
+      <div class="overflow-x-auto my-4">
+        <table class="w-full text-left text-sm border-collapse border border-gray-300">
+          <thead class="bg-indigo-600 text-white">
+            <tr>
+              <th class="p-3 border border-indigo-700">Layer / Domain</th>
+              <th class="p-3 border border-indigo-700">Technology</th>
+              <th class="p-3 border border-indigo-700">Role & Description</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <tr class="bg-white"><td class="p-3 font-semibold border">Frontend Framework</td><td class="p-3 font-mono text-xs border">Next.js 14 (App Router)</td><td class="p-3 border">React server and client components, dynamic routing, metadata management</td></tr>
+            <tr class="bg-gray-50"><td class="p-3 font-semibold border">Frontend Language</td><td class="p-3 font-mono text-xs border">TypeScript 5.6.3</td><td class="p-3 border">Static type safety, interfaces, strict compilation checks</td></tr>
+            <tr class="bg-white"><td class="p-3 font-semibold border">Styling & UI</td><td class="p-3 font-mono text-xs border">Tailwind CSS 3.4.14</td><td class="p-3 border">Utility-first responsive design, dark/light mode engine, custom components</td></tr>
+            <tr class="bg-gray-50"><td class="p-3 font-semibold border">HTTP Client</td><td class="p-3 font-mono text-xs border">Axios 1.7.7</td><td class="p-3 border">REST requests with request/response interceptors and automated token refresh</td></tr>
+            <tr class="bg-white"><td class="p-3 font-semibold border">Backend Framework</td><td class="p-3 font-mono text-xs border">Node.js + Express 4.21.1</td><td class="p-3 border">REST API gateway, middleware routing, and centralized error handling</td></tr>
+            <tr class="bg-gray-50"><td class="p-3 font-semibold border">Input Validation</td><td class="p-3 font-mono text-xs border">Zod 3.23.8</td><td class="p-3 border">Strict schema validation on request parameters, queries, and bodies</td></tr>
+            <tr class="bg-white"><td class="p-3 font-semibold border">Security Suite</td><td class="p-3 font-mono text-xs border">Helmet, CORS, Rate-Limit</td><td class="p-3 border">HTTP security headers, origin protection, and API abuse rate throttling</td></tr>
+            <tr class="bg-gray-50"><td class="p-3 font-semibold border">Authentication</td><td class="p-3 font-mono text-xs border">jsonwebtoken & bcryptjs</td><td class="p-3 border">Dual token (access/refresh) rotation and bcrypt password salting</td></tr>
+            <tr class="bg-white"><td class="p-3 font-semibold border">ORM & Database</td><td class="p-3 font-mono text-xs border">Prisma ORM 5.22.0 (SQLite)</td><td class="p-3 border">Relational database client, schema migrations, and seed scripts</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 9. SYSTEM DESIGN / METHODOLOGY -->
+    <div class="page-break mb-12">
+      <h2 class="text-2xl font-bold text-indigo-700 border-b pb-2 mb-4">9. System Design & Methodology</h2>
+      <p class="mb-4 text-justify">
+        AutoMarket adopts a strict three-tier layered architecture that physically and logically decouples presentation, application routing, business logic, and database operations.
+      </p>
+      
+      <h3 class="text-lg font-bold text-gray-800 mt-4 mb-2">9.1 Three-Tier Request Flow</h3>
+      <div class="bg-gray-900 text-gray-100 p-4 rounded-xl font-mono text-xs mb-4">
+Client (Next.js 14 on Port 3000)
+    │  (Axios Interceptor + Bearer Token)
+    ▼
+Express REST API Gateway (/api/v1 on Port 4000)
+    ├─► Helmet / CORS / Rate Limiting
+    ├─► Zod Validation Middleware
+    ▼
+Service Domain Layer (Business Logic)
+    ▼
+Prisma ORM Client
+    ▼
+Database (SQLite / PostgreSQL)
+      </div>
+
+      <h3 class="text-lg font-bold text-gray-800 mt-4 mb-2">9.2 Relational Data Entities</h3>
+      <ul class="list-disc pl-6 space-y-1 text-sm text-gray-700">
+        <li><strong>User:</strong> Stores credentials, name, role (<code class="font-mono">USER</code>, <code class="font-mono">ADMIN</code>), and ban status.</li>
+        <li><strong>Listing:</strong> Encapsulates vehicle specs (brand, model, price, year, mileage, fuel, transmission, condition, location, views, status).</li>
+        <li><strong>ListingImage:</strong> Maintains photos linked with cascade deletion rules to parent listing.</li>
+        <li><strong>Favorite:</strong> Enforces compound unique constraint on <code class="font-mono">(userId, listingId)</code>.</li>
+        <li><strong>Conversation & Message:</strong> Manages listing-bound messaging threads.</li>
+        <li><strong>Report:</strong> Stores user reports for administrative resolution.</li>
+      </ul>
+    </div>
+
+    <!-- 10. IMPLEMENTATION -->
+    <div class="page-break mb-12">
+      <h2 class="text-2xl font-bold text-indigo-700 border-b pb-2 mb-4">10. Implementation Details</h2>
+      <h3 class="text-lg font-bold text-gray-800 mb-2">10.1 Token Refresh Interceptor</h3>
+      <p class="text-sm text-gray-700 mb-2">The client interceptor transparently refreshes expired access tokens using the refresh token:</p>
+      <div class="bg-gray-900 text-gray-100 p-4 rounded-xl font-mono text-xs mb-6 overflow-x-auto">
+api.interceptors.response.use(
+  (response) => response,
+  async (error) => {
+    const originalRequest = error.config;
+    if (error.response?.status === 401 && !originalRequest._retry) {
+      originalRequest._retry = true;
+      const refreshToken = localStorage.getItem('refreshToken');
+      const { data } = await axios.post(`${API_URL}/auth/refresh`, { refreshToken });
+      localStorage.setItem('accessToken', data.data.accessToken);
+      originalRequest.headers.Authorization = `Bearer ${data.data.accessToken}`;
+      return api(originalRequest);
+    }
+    return Promise.reject(error);
+  }
+);
+      </div>
+
+      <h3 class="text-lg font-bold text-gray-800 mb-2">10.2 Chat 5-Second Polling Hook</h3>
+      <div class="bg-gray-900 text-gray-100 p-4 rounded-xl font-mono text-xs mb-4 overflow-x-auto">
+useEffect(() => {
+  if (!selectedConv) return;
+  const loadMessages = async () => {
+    const res = await chatAPI.getMessages(selectedConv.id);
+    if (res.data?.data) setMessages(res.data.data);
+  };
+  loadMessages();
+  const interval = setInterval(loadMessages, 5000);
+  return () => clearInterval(interval);
+}, [selectedConv]);
+      </div>
+    </div>
+
+    <!-- 11. OUTPUT AND RESULTS -->
+    <div class="page-break mb-12">
+      <h2 class="text-2xl font-bold text-indigo-700 border-b pb-2 mb-4">11. Output and Results</h2>
+      <h3 class="text-lg font-bold text-gray-800 mb-2">11.1 Working Website Homepage</h3>
+      <div class="my-4 border rounded-xl overflow-hidden shadow-sm">
+        <img src="screenshots/homepage.png" alt="AutoMarket Homepage Screenshot" class="w-full h-auto">
+      </div>
+      <p class="text-xs text-center text-gray-500 italic mb-6">Figure 11.1: Live AutoMarket Homepage with Hero Search and Featured Vehicles</p>
+
+      <h3 class="text-lg font-bold text-gray-800 mb-2">11.2 Automated Integration Test Execution</h3>
+      <div class="bg-gray-900 text-emerald-400 p-4 rounded-xl font-mono text-xs mb-4">
+AutoMarket Server running on port 4000
+--- Starting End-to-End Verification Tests ---
+1. Testing Register (tester_1795531818692@example.com)...
+✓ Register response: true Registration successful
+2. Testing Login...
+✓ Login response: true User: Test Buyer
+3. Testing Post Ad...
+✓ Post Ad response: true Listing ID: cmwutaar70002lrdzt4e2t016 Status: PENDING
+4. Testing Admin Login...
+✓ Admin login response: true Role: ADMIN
+5. Testing Admin Approval...
+✓ Approved listing status: APPROVED
+6. Testing Search Listings (brand=Honda, type=CAR)...
+✓ Search results count: 2 Total: 2
+7. Testing Favorite Listing...
+✓ Favorite added: true Added to favorites
+✓ User favorites count: 1
+8. Testing Chat Flow...
+✓ Conversation created/fetched: cmwutab7v0006lrdz25auk84q
+✓ Message sent: Hi! Is this Honda City still available for a test drive?
+✓ Messages received count: 1
+=== ALL END-TO-END FLOWS PASSED SUCCESSFULLY! ===
+      </div>
+    </div>
+
+    <!-- 12. CONCLUSION & 13. FUTURE SCOPE & 14. REFERENCES -->
+    <div>
+      <h2 class="text-2xl font-bold text-indigo-700 border-b pb-2 mb-4">12. Conclusion</h2>
+      <p class="mb-4 text-justify">
+        AutoMarket accomplishes all project objectives by delivering a full-stack, enterprise-grade vehicle marketplace operating strictly on clean REST API principles. By enforcing strict architectural decoupling between the Next.js 14 frontend and the Express/Prisma backend, the system guarantees high security, maintainability, and scalability.
+      </p>
+
+      <h2 class="text-2xl font-bold text-indigo-700 border-b pb-2 mb-4 mt-8">13. Future Scope</h2>
+      <ul class="list-disc pl-6 space-y-1 text-sm text-gray-700 mb-8">
+        <li><strong>Digital Token & Escrow Payments:</strong> Integration with Razorpay / Stripe for token booking deposits.</li>
+        <li><strong>WebSockets:</strong> Upgrading chat to Socket.io for typing indicators and instant messaging.</li>
+        <li><strong>Cloud Media CDN:</strong> Migrating images to AWS S3 with WebP compression.</li>
+        <li><strong>AI Valuation Engine:</strong> Automated fair-market price recommendations based on historical data.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-indigo-700 border-b pb-2 mb-4">14. References</h2>
+      <ol class="list-decimal pl-6 space-y-1 text-sm text-gray-700">
+        <li><a href="https://github.com/Anoop20077/automarket" class="text-indigo-600 underline">Official AutoMarket Repository: https://github.com/Anoop20077/automarket</a></li>
+        <li><a href="https://nextjs.org/docs" class="text-indigo-600 underline">Next.js 14 Documentation: https://nextjs.org/docs</a></li>
+        <li><a href="https://expressjs.com" class="text-indigo-600 underline">Express.js Framework Guide: https://expressjs.com</a></li>
+        <li><a href="https://prisma.io/docs" class="text-indigo-600 underline">Prisma ORM Reference: https://prisma.io/docs</a></li>
+        <li><a href="https://tailwindcss.com/docs" class="text-indigo-600 underline">Tailwind CSS Documentation: https://tailwindcss.com/docs</a></li>
+      </ol>
+    </div>
+
+  </div>
+
+</body>
+</html>
